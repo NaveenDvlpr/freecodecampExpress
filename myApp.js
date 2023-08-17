@@ -34,6 +34,13 @@ app.get('/:word/echo', (req, res) => {
     res.json({echo: req.params.word});
 })
 
+app.route('/name').get((req, res) => {
+    const {firstname, lastname} = req.query;
+    res.json({name: firstname+' '+lastname});
+}).post((req, res) => {
+
+})
+
 console.log("Hello World");
 
 
